@@ -8,13 +8,13 @@
 			return false;
 		});
 
-		// Show student_add_modal 
-		$('a#single_show').click(function(){
+		// Show single student details modal
+		$(document).on('click','a#single_show', function(){
 			$('#single_student_modal').modal('show');
 
 			return false;
 		});
-
+		
 
 		//Add new Student
 		$('form#addStudentForm').submit(function(e){
