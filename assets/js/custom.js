@@ -67,6 +67,35 @@
 		}
 
 		allStudentData();
+
+		//Delete student
+		$(document).on('click','a#delete_student', function(){
+			let delete_id = $(this).attr('student_id');
+
+			let conf = confirm('Are you sure ?');
+			if (conf == true) {
+
+				$.ajax({
+			url : 'inc/ajax/delete_student.php',
+			data : {id : delete_id },
+			method : "POST",
+			success : function(data){
+
+				$('.mess-all').html('<p class ="alert alert-success ">Student Data Deleted ! <button class = "close" data-dismiss = "alert">&times;</button></p>');
+
+				allStudentData();
+			}
+		});
+
+			}else{
+				return false;
+			}
+
+
+		
+
+			return false;
+		});
 		
 
 

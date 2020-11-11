@@ -30,7 +30,7 @@
 		<td>
 			<a id="single_show" class="btn btn-sm btn-info" href="#">View</a>
 			<a class="btn btn-sm btn-warning" href="#">Edit</a>
-			<a class="btn btn-sm btn-danger" href="#">Delete</a>
+			<a id="delete_student" student_id = "<?php echo $all['id']; ?>" class="btn btn-sm btn-danger" href="#">Delete</a>
 		</td>
 	</tr>
 
