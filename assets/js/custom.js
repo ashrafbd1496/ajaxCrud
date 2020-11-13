@@ -116,7 +116,7 @@
 		});
 
 
-		//single student data search 
+		//fix the edit / update form 
 
 		function resetUpdateForm(student_id){
 
