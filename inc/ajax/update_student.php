@@ -9,7 +9,7 @@
 
 	// print_r($_POST);
 
-	 $id = $_POST['student_id'];
+	 echo $id = $_POST['student_id'];
 	 $name= $_POST['name'];
 	 $email = $_POST['email'];
 	 $cell = $_POST['cell'];

@@ -116,18 +116,14 @@
 		});
 
 
+		//single student data search 
 
-		//EDIT student Data
-
-		$(document).on('click','a#edit_student', function(e){
-			e.preventDefault();
-
-			let edit_id = $(this).attr('student_id');
+		function resetUpdateForm(student_id){
 
 			$.ajax({
 
 			url : 'inc/ajax/edit_student.php',
-			data : {id : edit_id },
+			data : {id : student_id },
 			method : "POST",
 			success : function(data){
 
@@ -141,6 +137,19 @@
 				$('#student_update_modal img').attr('src','media/img/students/' + edit_data.photo);
 			}
 		});
+
+		}
+
+
+
+		//EDIT student Data
+
+		$(document).on('click','a#edit_student', function(e){
+			e.preventDefault();
+
+			let edit_id = $(this).attr('student_id');
+
+			resetUpdateForm(edit_id);
 
 
 			$('#student_update_modal').modal('show');
@@ -161,13 +170,14 @@
 				method : "POST",
 				success : function(data){
 
-					 // alert(data);
+				
+					// $('#student_update_modal').modal('hide');
 
-					$('#student_update_modal').modal('hide');
-
-					$('.mess-all').html('<p class ="alert alert-success ">Student Data updated successful ! <button class = "close" data-dismiss = "alert">&times;</button></p>');
+					$('.mess').html('<p class ="alert alert-success ">Student Data updated successful ! <button class = "close" data-dismiss = "alert">&times;</button></p>');
 
 				allStudentData();
+
+				resetUpdateForm(data);
 				
 				}
 			});
