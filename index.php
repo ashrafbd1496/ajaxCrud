@@ -57,6 +57,56 @@
 		</div>
 	</div>
 
+	<!-- STUDENT UPDATE MODAL  -->
+	<div id="student_update_modal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<h2>Update Student Data</h2>
+					<div class="mess"></div>
+					<hr>
+
+
+					<form id="updateStudentForm" action="" method="POST" enctype="multipart/form-data">
+						<div class="form-group">
+							<label for="">Name</label>
+							<input class="form-control" name="name" type="text">
+							<input type="hidden" name="student_id">
+						</div>
+
+						<div class="form-group">
+							<label for="">Email</label>
+							<input class="form-control" name="email" type="text">
+						</div>
+
+						<div class="form-group">
+							<label for="">Cell</label>
+							<input class="form-control" name="cell" type="text">
+						</div>
+
+						<div class="form-group">
+							<img src="" alt="" style="width: 200px; height: 200px;">
+							<input type="hidden" name="old_photo">
+						</div>
+
+						<div class="form-group">
+							<label for="">Photo</label>
+							<input class="form-control" name="new_photo" type="file">
+						</div>
+
+						<div class="form-group">
+							<label for=""></label>
+							<input class="btn btn-primary" name="add" type="submit" value="Update student">
+						</div>
+					</form>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
 
 
 
@@ -68,29 +118,25 @@
 					<h2>Single Student Data</h2>
 					<hr>
 					
-					<img class="shadow" style="width: 200px; height:200px; display: block;margin: auto; border-radius: 50%; border: 10px solid #FFF;" src="assets/media/img/pp_photo/IMG_9911_copy.307195445_std.jpg" alt="">
-					<h2 class="text-center">Asraful Haque</h2>
+					<img id="single_student_img" class="shadow" style="width: 200px; height:200px; display: block;margin: auto; border-radius: 50%; border: 10px solid #FFF;" src="" alt="">
+					<h2 id="single_name" class="text-center"></h2>
 
 					<table class="table table-striped">
 						<tr>
 							<td>Name :</td>
-							<td>Asraful Haque</td>
+							<td id="single_name"></td>
 						</tr>
 
 						<tr>
-							<td>Name :</td>
-							<td>Asraful Haque</td>
+							<td>Email</td>
+							<td id="single_email"></td>
 						</tr>
 
 						<tr>
-							<td>Name :</td>
-							<td>Asraful Haque</td>
+							<td>Cell :</td>
+							<td id="single_cell"></td>
 						</tr>
 
-						<tr>
-							<td>Name :</td>
-							<td>Asraful Haque</td>
-						</tr>
 					</table>
 
 				</div>
